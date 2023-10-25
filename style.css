@@ -1,0 +1,174 @@
+@import url("root.css");
+@import url("header.css");
+@import url("newTabsSection.css");
+@import url("main.css");
+@import url("brend-section.css");
+
+@media only screen and (max-width:1170px){
+    html{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width:970px){
+    html{
+        font-size: 14px;
+    }
+    .logo-text{
+        display: none;
+    }
+    nav{
+        width: 100%;
+        padding: 0 1rem;
+    }
+.menu-button{
+    display: flex;
+}
+.login-container{
+    display: none;
+}
+    .menu-list{
+        height: 0%;
+        width: 0%;
+        position: absolute;
+        top: -100%;
+        left: 50%;
+        transform: translateX(-50%);
+        
+        padding: 2rem 0;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--iconbg);
+        z-index: 9;
+      transition: all 500ms;
+        
+    }
+.menu-list.is-active{
+    top: 0%;
+    width: 100vw;
+    height: 50vh;
+    transition: all 1.5s;
+}
+.menu-icon{
+    display: flex;
+}
+.newTabs-container{
+    flex-direction: column-reverse;
+    gap: -2rem;
+
+
+}
+.arrow-section{
+    margin-top: 0rem;
+    
+}
+.arrow-section-2{
+    transform: translateY(-30px);
+}
+.arrow-section-3{
+    transform:translateY(40px) ;
+    
+}
+#main{
+    padding: 0 3rem;
+}
+.note-section-header{
+    font-size: 2rem;
+    color: #2E2E2E;
+font-weight: 500;
+
+}
+}
+@media only screen and (max-width:626px){
+    html{
+        font-size: 13px;
+    }
+    .header-content-container h1{
+        color: white;
+        font-size: 3rem;
+        line-height: 1;
+
+    }
+
+    .header-content-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 1rem;
+        gap: 2rem;
+    }
+    .newTabs-content{
+        padding: 0;
+    }
+    .brend-section-wrap{
+        
+    }
+    .brend-card{
+        width: 33%;
+    }
+}
+
+@media only screen and (max-width:400px){
+    html{
+        font-size: 11px;
+    }
+    .header-content-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 2rem;
+        gap: 2rem;
+    }
+    .arrow-section{
+        display: none;
+    }
+    .header-container{
+        gap: 3rem;
+    }
+    .icon-container{
+        margin: 1rem 0;
+    }
+    .newTabs-button-container{
+        padding: 1rem 2rem;
+        text-wrap: nowrap;
+    }   
+    .newTabs-button{
+        gap: 0.5rem;
+    }
+    .newTabs-button-container img{
+width: 2rem;
+height: 2rem;    }
+
+.brend-card{
+    width: 47%;
+}
+.brend-section-wrap{
+ gap: 0.5rem;       
+}
+}
+
+@media only screen and (max-width:1310px){
+
+    .icon-card1{
+        transform: rotate(-4deg) translateX(0px) ;
+    z-index: 4;
+    }
+    .icon-card2{
+        transform: rotate(4deg) translateY(0px);
+    z-index: 3;
+    }
+    .icon-card3{
+        transform: rotate(4deg) translateY(0px);
+    z-index: 3;
+    }
+    .icon-card4{
+        transform: rotate(4deg) translateY(0px);
+    z-index: 3;
+    }
+}
+
+/*Root style  */

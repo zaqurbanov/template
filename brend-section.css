@@ -1,0 +1,31 @@
+#brend-section{
+
+}
+.brend-section-wrap{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+row-gap: 0.5rem;
+
+padding: 2rem 0;
+
+
+}
+.brend-card{
+background-color: #EAEAEA;
+padding: 1rem 2rem;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 23%;
+border-radius:5px ;
+cursor: pointer;
+transition: all 0.5s;
+}
+.brend-card:hover{
+    transform: scale(0.9);
+}
+.brend-card img{
+width: 100%;
+
+}
