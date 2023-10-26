@@ -1,0 +1,41 @@
+#platform-section{
+padding: 5rem 0;
+}
+.social-icon-container{
+display: flex;
+justify-content: center;
+gap: 1rem;
+flex-wrap: wrap;
+padding: 5rem 0;
+
+}
+.social-icon-card{
+cursor: pointer;
+padding: 1rem;
+transition: all 0.5s;
+}
+.social-icon-card:hover{
+    background-color: #9CF22A;
+    border-radius: 10px;
+}
+.social-icon-card img{
+    width: 5rem;
+    height: 4rem;
+}
+.tweets{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+
+}
+.tweets figure{
+    width: 60%;
+   
+}
+.tweets figure img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}

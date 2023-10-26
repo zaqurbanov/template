@@ -7,7 +7,7 @@ flex-wrap: wrap;
 justify-content: space-around;
 row-gap: 0.5rem;
 
-padding: 2rem 0;
+padding: 10rem 0;
 
 
 }
@@ -21,6 +21,7 @@ width: 23%;
 border-radius:5px ;
 cursor: pointer;
 transition: all 0.5s;
+min-width: 24%;
 }
 .brend-card:hover{
     transform: scale(0.9);

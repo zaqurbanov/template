@@ -179,11 +179,94 @@
       <section id="platform-section">
         <h2 class="second-header">All platform connect to findtrend</h2>
 
-        <div class="icon-container"></div>
+        <div class="social-icon-container">
+          <div class="social-icon-card c1"><img src="img/social-icon/icon1.svg" alt=""></div>
+          <div class="social-icon-card c2"><img src="img/social-icon/icon2.svg" alt=""></div>
+          <div class="social-icon-card c3"><img src="img/social-icon/icon3.svg" alt=""></div>
+          <div class="social-icon-card c4"><img src="img/social-icon/icon4.svg" alt=""></div>
+          <div class="social-icon-card c5"><img src="img/social-icon/icon5.svg" alt=""></div>
+          <div class="social-icon-card c6"><img src="img/social-icon/icon6.svg" alt=""></div>
 
+        </div>
+
+        <div class="tweets">
+          <figure><img src="img/tweet 1.png" alt=""></figure>
+          <figure><img src="img/tweet 2.png" alt=""></figure>
+          <figure><img src="img/tweet 3.png" alt=""></figure>
+        </div>
 
       </section>
+      
     </main>
+    <section id="pricing-section" class="pricing-card-section">
+        <div class="pricing-header-wrap">
+          <h2 class="pricing-header">Get Your Best deal</h2>
+        </div>
+        <div class="pricing-toggle-container">
+          <span>Monthly</span>
+          <div class="toggle"></div>
+          <span>Yearly</span>
+        </div>
+
+          <div class="pricing-card-wrap">
+
+            <!-- card 1 -->
+            <div class="pricing-card">
+              <div class="pricing-card-header-wrap"><h2 class="ppricing-card-header">Personal</h2>
+              <p class="comment">Special first packet for all</p>
+
+              </div>
+              <div class="cost-wrap">
+                <h2 class=""><span class="cost">5.65</span>$</h2>
+                <span class="daily">/Month</span>
+              </div>
+              <ul class="card-list">
+                <li class="card-item"><img src="img/pricing-icon.svg" alt="">Up to 5 page each group</li>
+                <li class="card-item"> <img src="img/pricing-icon.svg" alt="">Up to 10 page </li>
+                <li class="card-item"><img src="img/pricing-icon.svg" alt="">5 Days group page saved</li>
+
+              </ul>
+            </div>
+
+
+            <!-- card 2 -->
+            <div class="pricing-card active-card">
+              <div class="pricing-card-header-wrap"><h2 class="pricing-card-header">Regular</h2>
+              <p class="comment">Special first packet for all</p>
+
+              </div>
+              <div class="cost-wrap">
+                <h2 class=""><span class="cost">17.99</span>$</h2>                <span class="daily">/Month</span>
+              </div>
+              <ul class="card-list">
+                <li class="card-item"><img src="img/pricing-icon.svg" alt="">Up to 15 page each group</li>
+                <li class="card-item"> <img src="img/pricing-icon.svg" alt="">Download page up to 20</li>
+                <li class="card-item"><img src="img/pricing-icon.svg" alt="">Up to 10 group page</li>
+                <li class="card-item"><img src="img/pricing-icon.svg" alt="">15 Days group page saved</li>
+
+              </ul>
+            </div>
+                <!-- card 3 -->
+            <div class="pricing-card">
+              <div class="pricing-card-header-wrap"><h2 class="ppricing-card-header">Personal</h2>
+              <p class="comment">Special first packet for all</p>
+
+              </div>
+              <div class="cost-wrap">
+                <h2 class=""><span class="cost">37.89</span>$</h2>
+                                <span class="daily">/Month</span>
+              </div>
+              <ul class="card-list">
+                <li class="card-item"><img src="img/pricing-icon.svg" alt="">Up to 5 page each group</li>
+                <li class="card-item"> <img src="img/pricing-icon.svg" alt="">Up to 10 page </li>
+                <li class="card-item"><img src="img/pricing-icon.svg" alt="">Up to 15 page each group</li>
+                <li class="card-item"><img src="img/pricing-icon.svg" alt="">Up to 10 group page</li> 
+                <li class="card-item"><img src="img/pricing-icon.svg" alt="">5 Days group page saved</li>
+              </ul>
+            </div>
+          </div>
+
+      </section>
     <script>
         // menu 
       const menuBtn = document.querySelector(".menu-icon");
@@ -194,6 +277,48 @@
      menuList.classList.toggle("is-active");
      
       })
+
+
+        const togle = document.querySelector(".toggle");
+        const cost = document.querySelectorAll(".cost");
+        const daily = document.querySelectorAll(".daily");
+
+
+
+        togle.addEventListener("click",()=>{
+          togle.classList.toggle("active");
+          let summary = 0;
+          if(togle.classList.contains("active")){
+            for(let i = 0; i<cost.length; i++){
+              daily[i].innerHTML = "/Year";
+
+              summary=  cost[i].innerHTML*10.2;
+              summary=summary.toFixed(2)
+              cost[i].innerHTML = summary
+              
+            }
+          }
+          else{
+            for(let i = 0; i< cost.length; i++){
+              daily[i].innerHTML = "/Month";
+              summary =  cost[i].innerHTML/10.2;
+              summary =summary.toFixed(2);
+              cost[i].innerHTML = summary
+            }
+          }
+        })
+
+
+        // active card script
+        const cardSection  = document.getElementById("pricing-section");
+        const card = document.getElementsByClassName("pricing-card");
+      for(let i = 0; i<card.length; i++){
+        card[i].addEventListener("click",function(){
+          let current = document.getElementsByClassName("active-card");
+          current[0].className = current[0].className.replace(" active-card", "");
+          this.className +=" active-card";
+        })
+      }
 
     </script>
   </body>
