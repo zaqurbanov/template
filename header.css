@@ -12,11 +12,14 @@ header{
        display: flex;
        align-items: center;
        justify-content: space-between;
+       width: 100%;
        flex-wrap: wrap;
        margin: 0 auto;
        background-color: var(--headBg);
        padding: 0rem 3rem;
-       width: 90%;
+       
+       position: fixed;
+       top: 0.5%;
      
         
         z-index: 10;

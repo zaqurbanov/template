@@ -9,6 +9,7 @@
 @media only screen and (max-width:1170px){
     html{
         font-size: 16px;
+        
     }
 }
 
@@ -33,6 +34,7 @@
         height: 0%;
         width: 0%;
         position: absolute;
+        visibility: hidden;
         top: -100%;
         left: 50%;
         transform: translateX(-50%);
@@ -52,6 +54,7 @@
     width: 100vw;
     height: 50vh;
     transition: all 1.5s;
+    visibility: visible;
 }
 .menu-icon{
     display: flex;
@@ -118,6 +121,12 @@ font-weight: 500;
     }
     .brend-card{
         width: 33%;
+    }
+    #platform-section{
+        padding: 0rem;
+    }
+    .tweets{
+        padding-bottom: 2rem;
     }
 }
 
